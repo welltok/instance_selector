@@ -13,7 +13,7 @@ def instance_selector(cap_role, provider, args = {})
     abort("#{cap_role}: #{e.message}")
   end
 
-  role(cap_role, *instances.keys, role_options)
+  role(cap_role, instances.keys, role_options)
   @instance_selector_instances.merge!(instances)
 end
 
